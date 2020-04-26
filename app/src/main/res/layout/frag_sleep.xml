@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/dailyIntake2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="122dp"
+        android:text="Daily Intake Of Sleep"
+        android:textColor="#00688B"
+        android:textSize="32dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="52dp"
+        android:padding="16dp"
+        android:text="Weight(kg)"
+        android:textColor="#00688B" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:padding="16dp"
+        android:text="Age"
+        android:textColor="#00688B" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/textView3"
+        android:layout_alignParentRight="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="158dp"
+        android:padding="16dp"
+        android:text="Height(cm)"
+        android:textColor="#00688B" />
+
+    <EditText
+        android:id="@+id/ageA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="#272424"
+        android:inputType="textPersonName"
+        android:minEms="4" />
+
+    <EditText
+        android:id="@+id/heightA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+
+
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="165dp"
+        android:backgroundTint="#272424"
+        android:inputType="textPersonName"
+        android:minEms="4"
+        tools:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/weightA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:backgroundTint="#272424"
+        android:inputType="textPersonName"
+        android:minEms="4"
+        tools:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/determine2"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageA"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="49dp"
+        android:background="@drawable/button_border"
+        android:text="Determine" />
+
+    <Button
+        android:id="@+id/edit2"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightA"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@id/determine2"
+        android:background="@drawable/button_border"
+        android:text="Edit" />
+
+    <TextView
+        android:id="@+id/hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dailyIntake2"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:text="     "
+        android:textColor="#FFA500"
+        android:textSize="80dp">
+
+    </TextView>
+
+</RelativeLayout>

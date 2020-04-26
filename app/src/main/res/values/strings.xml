@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Step Counter</string>
+    <string name="title_activity_tabs">tabs</string>
+    <string name="tab_text_1">Steps</string>
+    <string name="tab_text_2">Water</string>
+    <string name="tab_text_3">Sleep</string>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_weight="1">
+
+
+    <TextView
+        android:id="@+id/w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="52dp"
+        android:padding="16dp"
+        android:text="Weight(kg)"
+        android:textColor="#00688B" />
+
+    <TextView
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:padding="16dp"
+        android:text="Age"
+        android:textColor="#00688B" />
+
+    <TextView
+        android:id="@+id/h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/a"
+        android:layout_alignParentRight="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="154dp"
+        android:padding="16dp"
+        android:text="Height(cm)"
+        android:textColor="#00688B"
+        tools:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/ageB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/a"
+        android:layout_marginLeft="16dp"
+        android:backgroundTint="#272424"
+        android:inputType="textPersonName"
+        android:minEms="4" />
+
+    <EditText
+        android:id="@+id/heightB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/h"
+
+
+        android:layout_centerVertical="false"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="-1dp"
+        android:layout_toRightOf="@id/a"
+        android:backgroundTint="#272424"
+        android:inputType="textPersonName"
+        android:minEms="4"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:layout_centerHorizontal="true"
+        tools:layout_marginRight="8dp" />
+
+    <EditText
+        android:id="@+id/weightB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/w"
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:backgroundTint="#272424"
+        android:inputType="textPersonName"
+        android:minEms="4"
+        tools:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/determine"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageB"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="46dp"
+        android:background="@drawable/button_border"
+        android:text="Determine" />
+
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/weightB"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@id/determine"
+        android:background="@drawable/button_border"
+        android:text="Edit" />
+
+    <TextView
+        android:id="@+id/dailyIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="122dp"
+        android:text="Daily Intake of water"
+        android:textColor="#00688B"
+        android:textSize="32dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/litres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dailyIntake"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:text="     "
+        android:textColor="#FFA500"
+        android:textSize="80dp">
+
+    </TextView>
+
+
+
+</RelativeLayout>
