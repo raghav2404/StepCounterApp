@@ -12,3 +12,5 @@ Circular Progress Bar
 Calculation of steps by keeping count of previous steps and movement detected by accelerometer sensor using Shared Preferences.
 The progress bar keeps increasing as steps increase as its color changes according to animations.
 Sleep and water intake calculation is on the basis of BMI(Body Mass Index) calculation considering the age,height,weight data stored in internal SQLite server.
+
+Link:https://drive.google.com/file/d/15eJ-JTRSpf1JsqL9WHpHAgtlU1UDZlNt/view?usp=sharing
