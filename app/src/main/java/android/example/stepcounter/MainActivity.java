@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button SignIn;
     Button SignUp;
     SQLiteDatabase db;
-    Date date;
+
 
 String username,password;
     @Override

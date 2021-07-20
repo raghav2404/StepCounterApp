@@ -1,6 +1,7 @@
 package android.example.stepcounter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.example.stepcounter.R;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -30,6 +31,8 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.TimeZone;
 
 import kotlin.Unit;
@@ -44,7 +47,8 @@ public class FragSteps extends Fragment {
     private double magni;
     private Integer stepcount = 0;
     Button reset;
-
+    Button dailySteps;
+   // SharedPreferences dailyStep;
 
     @Nullable
     @Override
@@ -57,6 +61,7 @@ public class FragSteps extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         tv1=(TextView)getActivity().findViewById(R.id.text);
         reset=(Button)getActivity().findViewById(R.id.reset) ;
+        dailySteps=(Button)getActivity().findViewById(R.id.dailySteps);
     tv =(TextView)getActivity().findViewById(R.id.tv);
         sensorManager = (SensorManager)getActivity().getSystemService(Context.SENSOR_SERVICE);
         CircularProgressBar circularProgressBar =getActivity().findViewById(R.id.circularProgressBar);
@@ -92,8 +97,17 @@ public class FragSteps extends Fragment {
                     int b=A.get(Calendar.MINUTE);
 
 
-                    if(a==0&&b==00)
-                        stepcount=0;
+                    if(a==0&&b==00) {
+                       SharedPreferences dailyStep=getActivity().getSharedPreferences("myPref",Context.MODE_PRIVATE);
+                        SharedPreferences.Editor ed1=dailyStep.edit();
+                        //Set<String> ss=new HashSet<String>();
+                       // ss.add(new Date().toString());
+                        //ss.add(stepcount.toString());
+                        ed1.putInt("HS",stepcount);
+                        ed1.apply();
+
+                        stepcount = 0;
+                    }
                     tv.setText(stepcount.toString());
                     circularProgressBar.setProgressWithAnimation(stepcount, (long) 50);
                     circularProgressBar.setProgressMax(5000f);
@@ -102,6 +116,15 @@ public class FragSteps extends Fragment {
                         public void onClick(View view) {
                             stepcount=0;
 
+                        }
+                    });
+
+                    dailySteps.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent = new Intent(getActivity(),ShowDailySteps.class);
+                            intent.putExtra("todaysteps",stepcount);
+                            startActivity(intent);
                         }
                     });
 

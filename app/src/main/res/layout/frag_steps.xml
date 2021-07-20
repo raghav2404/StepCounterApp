@@ -55,5 +55,19 @@
         android:text="   RESET  " />
 
 
+    <Button
+        android:id="@+id/dailySteps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/reset"
+
+
+        android:layout_alignBottom="@+id/reset"
+        android:layout_marginEnd="-27dp"
+        android:layout_marginBottom="-46dp"
+        android:background="@drawable/button_border"
+        android:text="  Show Past Record  " />
+
+
 </RelativeLayout>
 
